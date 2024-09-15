@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Index Layout</title>
+	</head>
+	
+	<body>
+		<section th:fragment="indexLayout">
+			<br />
+			<div sec:authorize="hasRole('ROLE_ADMIN')">
+				<a th:href="@{agregarPersona}"> [[#{index.nuevoRegistro}]] </a>
+			</div>
+			<br />
+			<form th:action="@{/buscarPersona}" method="post" th:object="${persona}">
+				<label for="dni"> [[#{index.dni}]] </label>
+				<input type="number" name="dni" id="dni" th:field="*{dni}" />
+				<input type="submit" name="search" th:value="#{index.buscar}" />
+			</form>
+		    <br />
+		</section>
+	</body>
+	
+</html>

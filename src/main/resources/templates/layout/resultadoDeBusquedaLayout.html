@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	
+	<body>
+		<section th:fragment="resultadoDeBusquedaLayout">
+			<div th:if="${persona != null}">
+				<h2> [[${persona.apellido} + ', ' + ${persona.nombre}]] </h2>
+				<ul>
+					<li>
+						<span> [[#{persona.dni}]] </span>
+						<h4 style="display: inline;"> [[${persona.dni}]] </h4>
+					</li>
+					<li>
+						<span> [[#{persona.fechaNacimiento}]] </span>
+						<h4 style="display: inline;"> [[${persona.fechaDeNacimiento}]] </h4>
+					</li>
+					<li>
+						<span> [[#{persona.email}]] </span>
+						<h4 style="display: inline;"> [[${persona.email}]] </h4>
+					</li>
+				</ul>
+			</div>
+			<div th:if="${persona == null}">
+				Error
+			</div>
+			<div sec:authorize="hasRole('ROLE_ADMIN')">
+				<a th:href="@{/editarPersona(id=${persona.id})}"> [[#{accion.editar}]] </a> -
+				<a th:href="@{/borrarPersona(id=${persona.id})}"> [[#{accion.eliminar}]] </a>
+			</div>
+			<br /> 
+		</section>
+	</body>
+	
+</html>

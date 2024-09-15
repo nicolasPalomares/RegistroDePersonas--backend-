@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+	<head>
+		<meta charset="UTF-8">
+		<title> [[#{login.titulo}]] </title>
+	</head>
+	
+	<body>
+		<div th:if="${param.error}"> [[#{login.error}]] </div>
+		<div th:if="${param.logout}"> [[#{login.sesionCerrada}]] </div>
+	
+		<section id="login">
+			<h4> [[#{login.titulo}]] </h4>
+			<form th:action="@{/login}" method="post">
+				<label> [[#{login.usuario}]] </label>
+				<div>
+					<input type="text" name="username" />
+				</div>
+				<label> [[#{login.contrasena}]] </label>
+				<div>
+					<input type="password" name="password" />
+				</div>
+				<br />
+				<div>
+					<input type="submit" value="Ingresar" />
+				</div>
+			</form>
+		</section>
+	</body>
+
+</html>

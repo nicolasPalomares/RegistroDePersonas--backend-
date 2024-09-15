@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+	  
+	<head>
+		<meta charset="UTF-8">
+		<title>Actualizar Persona Layout</title>
+	</head>
+	
+	<body>
+		<section th:fragment="actualizarPersonaLayout">
+			<h4> [[#{actualizarPersona.titulo}]] </h4>
+			<form th:action="@{/guardarPersona}" method="post" th:object="${persona}">
+				<input type="hidden" name="id" th:field="*{id}" />
+				<div>
+					<label for="nombre"> [[#{persona.nombre}]] </label>
+					<input type="text" name="nombre" th:field="*{nombre}" required />
+				</div>
+				<br />
+				<div>
+					<label for="apellido"> [[#{persona.apellido}]] </label>
+					<input type="text" name="apellido" th:field="*{apellido}" required />
+				</div>
+				<br />
+				<div>
+					<label for="dni"> [[#{persona.dni}]] </label>
+					<input type="number" name="dni" th:field="*{dni}" required />
+				</div>
+				<br />
+				<div>
+					<label for="fechaDeNacimiento"> [[#{persona.fechaNacimiento}]] </label>
+					<input type="date" name="fechaDeNacimiento" th:field="*{fechaDeNacimiento}" required />
+				</div>
+				<br />
+				<div>
+					<label for="email"> [[#{persona.email}]] </label>
+					<input type="email" name="email" th:field="*{email}" required />
+				</div>
+				<br /><br />
+				<input type="submit" name="save" th:value="#{actualizarPersona.guardar}" />
+			</form>
+			<br />
+		</section>
+	</body>
+	
+</html>

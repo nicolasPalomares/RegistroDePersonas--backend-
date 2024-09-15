@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Layout</title>
+	</head>
+	
+	<body>
+	
+		<header th:fragment="header">
+			<div sec:authorize="isAuthenticated()">
+				<h2> [[#{index.bienvenido}]] </h2>
+				<span> [[#{index.usuario}]] </span>
+				<span sec:authentication="name"></span>
+			</div>
+		</header>
+		
+		<footer th:fragment="footer">
+			<a th:href="@{/}"> [[#{accion.inicio}]] </a>
+			<div sec:authorize="isAuthenticated()">
+				<form method="POST" th:action="@{/logout}">
+					<a href="#" onclick="this.parentNode.submit();"> [[#{index.salir}]] </a>
+				</form>
+				<p>
+					<a th:href="@{/(lang=en)}">EN</a> |
+					<a th:href="@{/(lang=es)}">ES</a> |
+				</p>
+			</div>
+		</footer>
+		
+	</body>
+	
+</html>

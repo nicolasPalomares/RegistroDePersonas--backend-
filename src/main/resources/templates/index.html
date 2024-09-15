@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+      
+	<head>
+		<meta charset="UTF-8">
+		<title> [[#{index.titulo}]] </title>
+	</head>
+	
+	<body>
+		<header th:replace="~{layout/layout :: header}"></header>
+		<section th:replace="~{layout/indexLayout :: indexLayout}"></section>
+	    <footer th:replace="~{layout/layout :: footer}"></footer>
+	</body>
+
+</html>
