@@ -4,13 +4,13 @@ especificando el DNI de la persona; las operaciones de agregar, editar y elimina
 Administrador puedan realizarlas. Actualmente hay dos registros en la base de datos creados por mi como ejemplo, uno con DNI 11223344 y otro con DNI
 00000011; las credenciales de los usuarios de ejemplo establecidos también por mi son los siguientes:
  
-- (ROLE_USER)
-Username: user1
-Password: user12345
+## (ROLE_USER)
+- Username: user1
+- Password: user12345
   
-- (ROLE_ADMIN)
-Username: admin1
-Password: admin12345
+## (ROLE_ADMIN)
+- Username: admin1
+- Password: admin12345
   
 En la carpeta "db_backup" dentro del directorio del proyecto se encuentra una copia de respaldo de la base de datos.
 El proyecto incluye internacionalización (i18n) para español e inglés, páginas de error personalizables, y está realizado
