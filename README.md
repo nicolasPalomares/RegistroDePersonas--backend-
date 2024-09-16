@@ -1,4 +1,4 @@
---- (ES) ---
+# Registro de personas (ES)
 Esta aplicación backend realizada en Spring representa un sistema de registro de personas. Mediante una barra de búsqueda, el usuario puede buscar registros
 especificando el DNI de la persona; las operaciones de agregar, editar y eliminar registros están configuradas para que sólo los usuarios con rol de
 Administrador puedan realizarlas. Actualmente hay dos registros en la base de datos creados por mi como ejemplo, uno con DNI 11223344 y otro con DNI
@@ -16,7 +16,7 @@ En la carpeta "db_backup" dentro del directorio del proyecto se encuentra una co
 El proyecto incluye internacionalización (i18n) para español e inglés, páginas de error personalizables, y está realizado
 siguiendo la arquitectura MVC ('Model-View-Controller') de Spring.
   
---- (EN) ---
+# People Registration (EN)
   
 This backend application built with Spring represents a people registry system. Through a search bar, the user can search for records by specifying the person's
 National ID number; the operations of adding, editing, and deleting records are configured so that only users with Administrator role can perform them.
