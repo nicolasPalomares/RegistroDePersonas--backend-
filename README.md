@@ -4,11 +4,11 @@ especificando el DNI de la persona; las operaciones de agregar, editar y elimina
 Administrador puedan realizarlas. Actualmente hay dos registros en la base de datos creados por mi como ejemplo, uno con DNI 11223344 y otro con DNI
 00000011; las credenciales de los usuarios de ejemplo establecidos también por mi son los siguientes:
  
-(ROLE_USER)
+- (ROLE_USER)
 Username: user1
 Password: user12345
   
-(ROLE_ADMIN)
+- (ROLE_ADMIN)
 Username: admin1
 Password: admin12345
   
