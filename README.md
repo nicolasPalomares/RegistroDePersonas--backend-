@@ -8,7 +8,7 @@ Administrador puedan realizarlas. Actualmente hay dos registros en la base de da
 - Username: user1
 - Password: user12345
   
-## (ROLE_ADMIN)
+### (ROLE_ADMIN)
 - Username: admin1
 - Password: admin12345
   
@@ -23,19 +23,19 @@ National ID number; the operations of adding, editing, and deleting records are 
 Currently, there are two records in the database created by me as example, one with ID Number 11223344 and another with ID Number 00000011. The user's credentials
 set by me (as example) are as follows:
   
-(ROLE_USER) 
-Username: user1 
-Password: user12345
+### (ROLE_USER) 
+- Username: user1 
+- Password: user12345
   
-(ROLE_ADMIN) 
-Username: admin1 
-Password: admin12345
+### (ROLE_ADMIN) 
+- Username: admin1 
+- Password: admin12345
  
 A backup copy of the database can be found in the 'db_backup' folder within the project directory.
 The project includes internationalization (i18n) for spanish and english, customizable error pages, and was made following 
 Spring MVC architecture ('Model-View-Controller').
 
-- Screenshots:
+# Screenshots:
 
 ![msedge_bjBhjuefbT](https://github.com/user-attachments/assets/c3ca19c6-4fa9-44b3-a66c-1d8eae695d1f)
 
@@ -46,4 +46,4 @@ Spring MVC architecture ('Model-View-Controller').
 ![msedge_TopzHqW3Mj](https://github.com/user-attachments/assets/4f241ce5-467d-4d54-b96b-3f3b21e08713)
 
 
-(Java 21 & Spring 3.3.3)
+## (Java 21 & Spring 3.3.3)
