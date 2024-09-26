@@ -31,7 +31,26 @@
 					<label for="fechaDeNacimiento"> [[#{persona.fechaNacimiento}]] </label>
 					<input type="date" name="fechaDeNacimiento" th:field="*{fechaDeNacimiento}" required />
 				</div>
-				<br />
+				
+				<!-- Información de Domicilio -->
+				<input type="hidden" name="domicilio.id" th:field="*{domicilio.id}" />
+				<br/>
+				<div>
+					<label for="calle"> [[#{domicilio.calle}]] </label>
+					<input type="text" name="domicilio.calle" th:field="*{domicilio.calle}" required />
+				</div>
+				<br/>
+				<div>
+					<label for="nroCalle"> [[#{domicilio.nroCalle}]] </label>
+					<input type="number" name="domicilio.nroCalle" th:field="*{domicilio.nroCalle}" />
+				</div>
+				<br/>
+				<div>
+					<label for="localidad"> [[#{domicilio.localidad}]] </label>
+					<input type="text" name="domicilio.localidad" th:field="*{domicilio.localidad}" required />
+				</div>
+				<!-- ------------------------ -->
+				<br/>
 				<div>
 					<label for="email"> [[#{persona.email}]] </label>
 					<input type="email" name="email" th:field="*{email}" required />
